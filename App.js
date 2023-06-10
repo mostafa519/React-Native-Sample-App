@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+ 
+import { useCallback, useState } from "react";
+import { Pressable } from "react-native";
+// import {Image, Platform, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native-web';
+import {
+  Alert,
+  Button,
+  Image, 
+  SafeAreaView, 
+  StyleSheet, Text,
+  TextInput,
+  TouchableNativeFeedbackBase, 
+} from "react-native"; 
+import ToDoList from "./Component/toDolist/ToDoList";  
+import MyColorApp from"./Component/myColors/myColorApp";
+import Photos from "./Component/Day1";
 export default function App() {
+ 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styless.con}>
+      <ToDoList></ToDoList> 
+ <MyColorApp></MyColorApp>
+ <Photos></Photos>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const styless = StyleSheet.create({
+  con: {
+    flex: 1, 
+    alignItems: "center",
+    justifyContent: "center",
+    opacity:1,
+    height: "100%", 
+    color:"white",
+    paddingTop: 20,
+    fontStyle:"italic"
+    
   },
 });
