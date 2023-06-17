@@ -21,7 +21,7 @@ export default function ToDoList() {
 
   const handleAddTodo = useCallback((val) => {
     if (val.length <= 3) {
-      setErr("Please Enter Valid input :");
+      setErr(" Must be Greter than 3 :");
     } else {
       setErr("");
       if (todo.length > 0) {
@@ -43,7 +43,7 @@ export default function ToDoList() {
   };
   const handleComplete = useCallback(() => {
     setCount(++count);
-    console.log(count);
+    // console.log(count);
   });
 
   const handlePress = (id) => {
@@ -68,7 +68,7 @@ export default function ToDoList() {
           <View style={styles.addxt}>
             <ScrollView horizontal>
               <Text style={[isDisabled && styles.DecDisabled]}>
-                {item.todo}{" "}
+                {item.todo} 
               </Text>
 
               <View style={styles.std}>

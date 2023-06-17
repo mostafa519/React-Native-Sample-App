@@ -14,14 +14,26 @@ import {
 import ToDoList from "./Component/toDolist/ToDoList";  
 import MyColorApp from"./Component/myColors/myColorApp";
 import Photos from "./Component/Day1";
+import Routting from "./Component/Day3/Day3";
+import { NavigationContainer } from "@react-navigation/native";
+import Root from "./Navigation/root";
+import UsersContextProvider from "./Context/userContext";
 export default function App() {
  
   return (
-    <SafeAreaView style={styless.con}>
-      <ToDoList></ToDoList> 
- <MyColorApp></MyColorApp>
- <Photos></Photos>
-    </SafeAreaView>
+
+    <NavigationContainer>
+      <UsersContextProvider>
+      <Root></Root>
+      </UsersContextProvider>
+    </NavigationContainer>
+    // <SafeAreaView style={styless.con}>
+    //   <ToDoList></ToDoList>
+    //   </SafeAreaView> 
+//       {/* <Routting></Routting> */}
+//  {/* <MyColorApp></MyColorApp> */}
+//  {/* <Photos></Photos> */}
+  
   );
 }
 

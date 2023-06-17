@@ -65,6 +65,9 @@ export default StyleSheet.create({
     borderRadius: 10,
     marginBottom: 5,
     marginTop: 5,
+    borderBottomColor: "blue",
+    borderBottomWidth: 2,
+    
   },
   addbt: {
     backgroundColor: "red",
@@ -105,5 +108,5 @@ export default StyleSheet.create({
   DecDisabled:{
 
     textDecorationLine:"line-through"
-  }
+  } 
 });
